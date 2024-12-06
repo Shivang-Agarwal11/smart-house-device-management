@@ -1,0 +1,56 @@
+version: '3.8'
+services:
+  analytics:
+    build:
+      context: ./analytics
+      dockerfile: Dockerfile
+    container_name: analytics-service
+    ports:
+      - "8084:8084"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - microservices-network
+
+  device-control:
+    build:
+      context: ./device-control
+      dockerfile: Dockerfile
+    container_name: device-control-service
+    ports:
+      - "8083:8083"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - microservices-network
+
+  device-register:
+    build:
+      context: ./device-register
+      dockerfile: Dockerfile
+    container_name: device-register-service
+    ports:
+      - "8082:8082"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - microservices-network
+
+  user:
+    build:
+      context: ./user
+      dockerfile: Dockerfile
+    container_name: user-service
+    ports:
+      - "8081:8081"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - microservices-network
+
+networks:
+  microservices-network:
+    driver: bridge
+
+volumes:
+  mongo-data:

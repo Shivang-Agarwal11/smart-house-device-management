@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: device-register-deployment
+  namespace: microservices
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: device-register
+  template:
+    metadata:
+      labels:
+        app: device-register
+    spec:
+      containers:
+      - name: device-register
+        image: 2023sl93054/device-register-service:latest
+        ports:
+        - containerPort: 8082
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: device-register-service
+  namespace: microservices
+spec:
+  selector:
+    app: device-register
+  ports:
+    - protocol: TCP
+      port: 8082
+      targetPort: 8082

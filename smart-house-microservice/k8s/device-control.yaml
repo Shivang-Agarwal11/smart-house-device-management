@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: device-control-deployment
+  namespace: microservices
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: device-control
+  template:
+    metadata:
+      labels:
+        app: device-control
+    spec:
+      containers:
+      - name: device-control
+        image: 2023sl93054/device-control-service:latest
+        ports:
+        - containerPort: 8083
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: device-control-service
+  namespace: microservices
+spec:
+  selector:
+    app: device-control
+  ports:
+    - protocol: TCP
+      port: 8083
+      targetPort: 8083

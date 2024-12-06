@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .main-container {
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  form input:focus {
+    border-color: #3498db;
+  }
+  
+  form button {
+    margin-top: 10px;
+  }
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+  }
+  
+  nav h1 {
+    font-size: 1.8rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  nav button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  nav button:hover {
+    background-color: #c0392b;
+  }
+  .main-container {
+    padding: 20px;
+  }
+  
+  .devices-container {
+    margin-top: 20px;
+  }
+  
+  .device-table {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .device-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .device-detail {
+    margin: 5px 10px;
+  }
+  
+  .device-detail strong {
+    margin-right: 5px;
+  }
+  

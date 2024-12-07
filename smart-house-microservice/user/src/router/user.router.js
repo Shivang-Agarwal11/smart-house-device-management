@@ -34,6 +34,7 @@ const validateUserInput = [
 
 
 router.post('/', loginLimiter, async (req, res) => {
+    console.log("In Register User");
     const sanitizedData = sanitize(req.body)
     const user = new User(sanitizedData);
     try {
@@ -83,6 +84,7 @@ router.post('/', loginLimiter, async (req, res) => {
 
 
 router.post('/login', loginLimiter, async (req, res) => {
+    console.log("In Login User");
     try {
         const username = req.body.username;
         const password = req.body.password;
@@ -132,6 +134,7 @@ router.post('/login', loginLimiter, async (req, res) => {
 
 
 router.post('/logout', loginLimiter, userAuth, async (req, res) => {
+    console.log("In Logout User");
     const user = req.user
     try {
         user.tokens = []
@@ -155,6 +158,7 @@ router.post('/logout', loginLimiter, userAuth, async (req, res) => {
 });
 
 router.put('/', userAuth, loginLimiter, async (req, res) => {
+    console.log("In Update User");
     const allowedUpdates = ['name', 'email', 'password', 'contactNumber', 'address']; // Define allowed fields
     const updates = Object.keys(req.body);
     const isValidUpdate = updates.every(update => allowedUpdates.includes(update)); // Validate fields
@@ -212,6 +216,7 @@ router.put('/', userAuth, loginLimiter, async (req, res) => {
 
 
 router.delete('/', loginLimiter, userAuth, async (req, res) => {
+    console.log("In Delete User");
     const user = req.user
     try {
         // Delete related records

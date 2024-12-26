@@ -51,7 +51,7 @@ The **Smart House Device Management System** is a microservices-based applicatio
 
 ## Example User Journeys
 
-### Journey 1: Setting Up a Smart Home
+### Journey 1: Setting Up a Smart Home from this project
 1. Register as a new user and log in.
 2. Add devices such as a smart thermostat, smart bulbs, and a smart TV.
 3. Execute commands like turning on the thermostat or dimming the smart bulbs.
